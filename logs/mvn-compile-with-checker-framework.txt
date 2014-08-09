@@ -1,0 +1,38 @@
+[INFO] Scanning for projects...
+[WARNING] 
+[WARNING] Some problems were encountered while building the effective model for com.example:20140809_TheCheckerFramework_experimental:jar:1.0-SNAPSHOT
+[WARNING] 'build.plugins.plugin.version' for org.apache.maven.plugins:maven-compiler-plugin is missing. @ line 38, column 12
+[WARNING] 
+[WARNING] It is highly recommended to fix these problems because they threaten the stability of your build.
+[WARNING] 
+[WARNING] For this reason, future Maven versions might no longer support building such malformed projects.
+[WARNING] 
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building 20140809_TheCheckerFramework_experimental 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ 20140809_TheCheckerFramework_experimental ---
+[INFO] Deleting F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ 20140809_TheCheckerFramework_experimental ---
+[WARNING] Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ 20140809_TheCheckerFramework_experimental ---
+[WARNING] File encoding has not been set, using platform encoding MS932, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\target\classes
+[WARNING] 
+F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\src\main\java\com\example\FindBugsAnnotationSample.java:[11,9] [return.type.incompatible] incompatible types in return.
+[WARNING]   found   : null
+
+  required: @Initialized @NonNull String
+F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\src\main\java\com\example\FindBugsAnnotationSample.java:[28,26] [dereference.of.nullable] dereference of possibly-null reference checkForNullMethod()
+[WARNING] F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\src\main\java\com\example\FindBugsAnnotationSample.java:[30,22] [dereference.of.nullable] dereference of possibly-null reference nullableMethod()
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 3.476s
+[INFO] Finished at: Sat Aug 09 23:34:14 JST 2014
+[INFO] Final Memory: 9M/245M
+[INFO] ------------------------------------------------------------------------

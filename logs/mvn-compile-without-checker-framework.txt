@@ -1,0 +1,23 @@
+[INFO] Scanning for projects...
+[INFO]                                                                         
+[INFO] ------------------------------------------------------------------------
+[INFO] Building 20140809_TheCheckerFramework_experimental 1.0-SNAPSHOT
+[INFO] ------------------------------------------------------------------------
+[INFO] 
+[INFO] --- maven-clean-plugin:2.5:clean (default-clean) @ 20140809_TheCheckerFramework_experimental ---
+[INFO] Deleting F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\target
+[INFO] 
+[INFO] --- maven-resources-plugin:2.6:resources (default-resources) @ 20140809_TheCheckerFramework_experimental ---
+[WARNING] Using platform encoding (MS932 actually) to copy filtered resources, i.e. build is platform dependent!
+[INFO] skip non existing resourceDirectory F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\src\main\resources
+[INFO] 
+[INFO] --- maven-compiler-plugin:2.5.1:compile (default-compile) @ 20140809_TheCheckerFramework_experimental ---
+[WARNING] File encoding has not been set, using platform encoding MS932, i.e. build is platform dependent!
+[INFO] Compiling 2 source files to F:\goat-pc-data\ecworkspace\20140809_TheCheckerFramework_experimental\target\classes
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD SUCCESS
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time: 2.158s
+[INFO] Finished at: Sat Aug 09 23:35:56 JST 2014
+[INFO] Final Memory: 16M/245M
+[INFO] ------------------------------------------------------------------------
