@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- 
+http://types.cs.washington.edu/checker-framework/current/checker-framework-manual.html#ant-task
+ -->
+<project name="20140809_TheCheckerFramework_experimental-from-maven" default="check-nullness" basedir=".">
+
+ <property environment="env" />
+
+ <property name="checkerframework" value="${env.CHECKERFRAMEWORK}" />
+
+ <!-- On Mac/Linux, use the javac shell script; on Windows, use javac.bat -->
+ <condition property="cfJavac" value="javac.bat" else="javac">
+  <os family="windows" />
+ </condition>
+
+ <presetdef name="jsr308.javac">
+  <javac fork="yes" executable="${checkerframework}/checker/bin/${cfJavac}">
+   <!-- JSR-308-related compiler arguments -->
+   <compilerarg value="-version" />
+   <!-- optional, so .class files work with older JVMs: <compilerarg line="-target 5"/> -->
+   <compilerarg value="-implicit:class" />
+  </javac>
+ </presetdef>
+
+ <target name="check-nullness" description="Check for null pointer dereferences">
+  <!-- use jsr308.javac instead of javac -->
+  <jsr308.javac destdir="target/classes" includeantruntime="false">
+   <compilerarg line="-processor org.checkerframework.checker.nullness.NullnessChecker" />
+   <!-- optional, for implicit imports: <compilerarg value="-J-Djsr308_imports=org.checkerframework.checker.nullness.qual.*:org.checkerframework.dataflow.qual.*"/> -->
+   <compilerarg value="-J-Djsr308_imports=org.checkerframework.checker.nullness.qual.*:org.checkerframework.dataflow.qual.*" />
+   <!-- optional, to not check uses of library methods: <compilerarg value="-AskipUses=^(java\.awt\.|javax\.swing\.)"/> -->
+   <compilerarg line="-Xmaxerrs 10000" />
+   <src>
+    <pathelement location="src/main/java" />
+   </src>
+  </jsr308.javac>
+ </target>
+
+ <target name="compile" description="Compile the code">
+  <mkdir dir="target/classes" />
+  <javac destdir="target/classes" deprecation="true" target="1.8" verbose="true" fork="true" source="1.8">
+   <src>
+    <pathelement location="src/main/java" />
+   </src>
+  </javac>
+ </target>
+
+</project>
